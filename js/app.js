@@ -26,7 +26,7 @@ function submitPlaces (event){
   console.log(tripPlace);
   let transport = event.target.transport.value;
   console.log(transport);
-    
+
   // data for constructor
   new Travel (placeName , tripPlace , transport);
   console.log (allPlaces);
@@ -43,11 +43,13 @@ function renderPlaces(){
     table.appendChild(tableRow);
     let tableData = document.createElement('td');
     tableRow.appendChild(tableData);
+    let tableData2 = document.createElement('td');
+    tableRow.appendChild(tableData2);
     tableData.textContent = `Place Name: ${allPlaces[i].name} Trip Place: ${allPlaces[i].place} Type of Transport: ${allPlaces[i].transport}`;
   }
 }
 
-// reset table 
+// reset table
 
 function reset(){
   table.innerHTML='';
